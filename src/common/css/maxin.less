@@ -1,0 +1,15 @@
+.skew(@bg: #fff, @height:80px, @deg:3deg,@top: -20px){
+    position: relative;
+    z-index: 1;
+    &:before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -20px;
+        height: @height;
+        width: 100%;
+        transform: skewY(@deg);
+        background: @bg;
+        z-index: -1;
+    }
+}
